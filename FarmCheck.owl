@@ -1,0 +1,2118 @@
+@prefix : <https://github.zhaw.ch/raw/KnowledgeEngineering/FarmCheck-Model/master/FarmCheck.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl> .
+
+<https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl> rdf:type owl:Ontology ;
+                                                                                     owl:versionIRI <https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl/0.2> ;
+                                                                                     owl:versionInfo """FarmCheck ontology, version 0.2
+content author: Linda Tschirren tscr@zhaw.ch
+technical implementation: Erich Zbinden zber@zhaw.ch"""@en .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#affects
+:affects rdf:type owl:ObjectProperty ;
+         rdfs:domain :Need ,
+                     :Parameter ;
+         rdfs:range :Need ,
+                    :Parameter .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#Need
+:Need rdf:type owl:Class .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#Parameter
+:Parameter rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#BloodAdrenocorticotropicHormone
+:BloodAdrenocorticotropicHormone rdf:type owl:NamedIndividual ,
+                                          :Parameter ;
+                                 :affects :Health ,
+                                          :Respiration ;
+                                 rdfs:comment "blood - adrenocorticotropic hormone"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#BloodAlanineAminotransferase
+:BloodAlanineAminotransferase rdf:type owl:NamedIndividual ,
+                                       :Parameter ;
+                              rdfs:comment "blood - alanine aminotransferase"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#BloodAlbumin
+:BloodAlbumin rdf:type owl:NamedIndividual ,
+                       :Parameter ;
+              :affects :Health ,
+                       :OsmoticRegulation ;
+              rdfs:comment "blood - albumin 1"@en ,
+                           "blood - albumin 2"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#BloodAlcalinePhosphatase
+:BloodAlcalinePhosphatase rdf:type owl:NamedIndividual ,
+                                   :Parameter ;
+                          :affects :Health ;
+                          rdfs:comment "blood - alcaline phosphatase"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#BloodAmmonia
+:BloodAmmonia rdf:type owl:NamedIndividual ,
+                       :Parameter ;
+              :affects :Health ;
+              rdfs:comment "blood - ammonia"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#BloodAmmonium
+:BloodAmmonium rdf:type owl:NamedIndividual ,
+                        :Parameter ;
+               :affects :Health ;
+               rdfs:comment "blood - ammonium"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#BloodAspartateAminotransferase
+:BloodAspartateAminotransferase rdf:type owl:NamedIndividual ,
+                                         :Parameter ;
+                                :affects :Health ;
+                                rdfs:comment "blood - aspartate aminotransferase"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#BloodBileAcids
+:BloodBileAcids rdf:type owl:NamedIndividual ,
+                         :Parameter ;
+                :affects :Health ,
+                         :Nutrition ;
+                rdfs:comment "blood - bile acids"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#BloodCalcium
+:BloodCalcium rdf:type owl:NamedIndividual ,
+                       :Parameter ;
+              :affects :Health ;
+              rdfs:comment "blood - calcium"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#BloodCholesterol
+:BloodCholesterol rdf:type owl:NamedIndividual ,
+                           :Parameter ;
+                  :affects :Health ;
+                  rdfs:comment "blood - cholesterol"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#BloodCreatineKinase
+:BloodCreatineKinase rdf:type owl:NamedIndividual ,
+                              :Parameter ;
+                     :affects :Health ,
+                              :Movement ;
+                     rdfs:comment "blood - creatine kinase"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#BloodEpinephrine
+:BloodEpinephrine rdf:type owl:NamedIndividual ,
+                           :Parameter ;
+                  rdfs:comment "blood - epinephrine"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#BloodGlobulin
+:BloodGlobulin rdf:type owl:NamedIndividual ,
+                        :Parameter ;
+               :affects :Health ;
+               rdfs:comment "blood - globulin"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#BloodGlucose
+:BloodGlucose rdf:type owl:NamedIndividual ,
+                       :Parameter ;
+              :affects :Movement ;
+              rdfs:comment "blood - glucose"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#BloodHematocrit
+:BloodHematocrit rdf:type owl:NamedIndividual ,
+                          :Parameter ;
+                 :affects :Respiration ;
+                 rdfs:comment "blood - hematocrit"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#BloodLactateDehydrogenase
+:BloodLactateDehydrogenase rdf:type owl:NamedIndividual ,
+                                    :Parameter ;
+                           :affects :Health ,
+                                    :Movement ;
+                           rdfs:comment "blood - lactate dehydrogenase"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#BloodLeucocytes
+:BloodLeucocytes rdf:type owl:NamedIndividual ,
+                          :Parameter ;
+                 :affects :Health ;
+                 rdfs:comment "blood - leucocytes"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#BloodNitrite
+:BloodNitrite rdf:type owl:NamedIndividual ,
+                       :Parameter ;
+              :affects :Health ;
+              rdfs:comment "blood - nitrite"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#BloodNorepinephrine
+:BloodNorepinephrine rdf:type owl:NamedIndividual ,
+                              :Parameter ;
+                     rdfs:comment "blood - norepinephrine"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#BloodPh
+:BloodPh rdf:type owl:NamedIndividual ,
+                  :Parameter ;
+         :affects :Health ,
+                  :OsmoticRegulation ;
+         rdfs:comment "blood - pH"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#BloodPotassium
+:BloodPotassium rdf:type owl:NamedIndividual ,
+                         :Parameter ;
+                :affects :Health ,
+                         :OsmoticRegulation ;
+                rdfs:comment "blood - potassium"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#BloodSerotonin
+:BloodSerotonin rdf:type owl:NamedIndividual ,
+                         :Parameter ;
+                :affects :Health ,
+                         :SocialContact ;
+                rdfs:comment "blood - serotonin"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#BloodTelomereLength
+:BloodTelomereLength rdf:type owl:NamedIndividual ,
+                              :Parameter ;
+                     :affects :Health ;
+                     rdfs:comment "blood - telomere length"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#BloodTotalBilirubin
+:BloodTotalBilirubin rdf:type owl:NamedIndividual ,
+                              :Parameter ;
+                     rdfs:comment "blood - total bilirubin"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#BloodTotalProtein
+:BloodTotalProtein rdf:type owl:NamedIndividual ,
+                            :Parameter ;
+                   rdfs:comment "blood - total protein"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#BloodUricAcid
+:BloodUricAcid rdf:type owl:NamedIndividual ,
+                        :Parameter ;
+               rdfs:comment "blood - uric acid"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#BodyCare
+:BodyCare rdf:type owl:NamedIndividual ,
+                   :Need ;
+          :affects :FinAnalErosion ,
+                   :FinAnalInfection ,
+                   :FinCaudalErosion ,
+                   :FinCaudalInfection ,
+                   :FinDorsalErosion ,
+                   :FinDorsalInfection ,
+                   :FinPectoralErosion ,
+                   :FinPectoralInfection ,
+                   :FinVentralErosion ,
+                   :FinVentralInfection ,
+                   :IndividualBacterialInfection ,
+                   :IndividualMucusParasites ,
+                   :IndividualScaleLoss ,
+                   :IndividualSkinFungus ,
+                   :OrgansMucusComposition ,
+                   :OrgansMususQuantitiy ,
+                   :ShoalFungalInfections ,
+                   :ShoalJumping ,
+                   :ShoalMortalityRate ,
+                   :ShoalScratching ;
+          rdfs:comment "Body care"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#Exploration
+:Exploration rdf:type owl:NamedIndividual ,
+                      :Need ;
+             :affects :BloodEpinephrine ,
+                      :BloodNorepinephrine ,
+                      :ShoalVentilationRate ;
+             rdfs:comment "Exploration"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#FinAnalErosion
+:FinAnalErosion rdf:type owl:NamedIndividual ,
+                         :Parameter ;
+                :affects :Health ;
+                rdfs:comment "fin - anal erosion"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#FinAnalInfection
+:FinAnalInfection rdf:type owl:NamedIndividual ,
+                           :Parameter ;
+                  :affects :Health ;
+                  rdfs:comment "fin - anal infection"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#FinCaudalErosion
+:FinCaudalErosion rdf:type owl:NamedIndividual ,
+                           :Parameter ;
+                  :affects :Exploration ,
+                           :Health ,
+                           :Movement ,
+                           :Rest ,
+                           :Safety ,
+                           :SocialContact ;
+                  rdfs:comment "fin - caudal erosion"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#FinCaudalInfection
+:FinCaudalInfection rdf:type owl:NamedIndividual ,
+                             :Parameter ;
+                    :affects :Exploration ,
+                             :Health ,
+                             :Movement ,
+                             :Rest ,
+                             :Safety ,
+                             :SocialContact ;
+                    rdfs:comment "fin - caudal infection"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#FinDorsalErosion
+:FinDorsalErosion rdf:type owl:NamedIndividual ,
+                           :Parameter ;
+                  :affects :Exploration ,
+                           :Health ,
+                           :Movement ,
+                           :Rest ,
+                           :Safety ,
+                           :SocialContact ;
+                  rdfs:comment "fin - dorsal erosion"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#FinDorsalInfection
+:FinDorsalInfection rdf:type owl:NamedIndividual ,
+                             :Parameter ;
+                    :affects :Exploration ,
+                             :Health ,
+                             :Movement ,
+                             :Rest ,
+                             :Safety ,
+                             :SocialContact ;
+                    rdfs:comment "fin - dorsal infection"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#FinPectoralAsymmetry
+:FinPectoralAsymmetry rdf:type owl:NamedIndividual ,
+                               :Parameter ;
+                      :affects :Movement ;
+                      rdfs:comment "fin - pectoral asymmetry"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#FinPectoralErosion
+:FinPectoralErosion rdf:type owl:NamedIndividual ,
+                             :Parameter ;
+                    :affects :Exploration ,
+                             :Health ,
+                             :Movement ,
+                             :Rest ,
+                             :Safety ,
+                             :SocialContact ;
+                    rdfs:comment "fin - pectoral erosion"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#FinPectoralInfection
+:FinPectoralInfection rdf:type owl:NamedIndividual ,
+                               :Parameter ;
+                      :affects :Exploration ,
+                               :Health ,
+                               :Movement ,
+                               :Rest ,
+                               :Safety ,
+                               :SocialContact ;
+                      rdfs:comment "fin - pectoral infection"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#FinVentralAsymmetry
+:FinVentralAsymmetry rdf:type owl:NamedIndividual ,
+                              :Parameter ;
+                     :affects :Movement ;
+                     rdfs:comment "fin - ventral asymmetry"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#FinVentralErosion
+:FinVentralErosion rdf:type owl:NamedIndividual ,
+                            :Parameter ;
+                   :affects :Exploration ,
+                            :Health ,
+                            :Movement ,
+                            :Rest ,
+                            :Safety ,
+                            :SocialContact ;
+                   rdfs:comment "fin - ventral erosion"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#FinVentralInfection
+:FinVentralInfection rdf:type owl:NamedIndividual ,
+                              :Parameter ;
+                     :affects :Exploration ,
+                              :Health ,
+                              :Movement ,
+                              :Rest ,
+                              :Safety ,
+                              :SocialContact ;
+                     rdfs:comment "fin - ventral infection"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#Health
+:Health rdf:type owl:NamedIndividual ,
+                 :Need ;
+        :affects :BloodAlanineAminotransferase ,
+                 :BloodAlbumin ,
+                 :BloodAlcalinePhosphatase ,
+                 :BloodAspartateAminotransferase ,
+                 :BloodBileAcids ,
+                 :BloodCalcium ,
+                 :BloodCholesterol ,
+                 :BloodCreatineKinase ,
+                 :BloodGlobulin ,
+                 :BloodHematocrit ,
+                 :BloodLactateDehydrogenase ,
+                 :BloodLeucocytes ,
+                 :BloodPotassium ,
+                 :BloodSerotonin ,
+                 :BloodTelomereLength ,
+                 :BloodTotalBilirubin ,
+                 :BloodTotalProtein ,
+                 :BloodUricAcid ,
+                 :FinAnalErosion ,
+                 :FinAnalInfection ,
+                 :FinCaudalErosion ,
+                 :FinCaudalInfection ,
+                 :FinDorsalErosion ,
+                 :FinDorsalInfection ,
+                 :FinPectoralErosion ,
+                 :FinPectoralInfection ,
+                 :FinVentralErosion ,
+                 :FinVentralInfection ,
+                 :IndividualBacterialInfection ,
+                 :IndividualBodyCavity ,
+                 :IndividualBodyComposition ,
+                 :IndividualBodyConditionFactor ,
+                 :IndividualCardiacActivity ,
+                 :IndividualCardiosomaticIndex ,
+                 :IndividualCataract ,
+                 :IndividualExophthalmia ,
+                 :IndividualEyeBleeding ,
+                 :IndividualEyeColour ,
+                 :IndividualEyeInjury ,
+                 :IndividualEyeRollReflex ,
+                 :IndividualGillCover ,
+                 :IndividualGillLamellaesecondary ,
+                 :IndividualGillParasites ,
+                 :IndividualGillsprimarlyLamellae ,
+                 :IndividualGrowthOtoliths ,
+                 :IndividualGrowthScale ,
+                 :IndividualHeart ,
+                 :IndividualHepatosomaticIndex ,
+                 :IndividualIntestines ,
+                 :IndividualJawDeformation ,
+                 :IndividualKidney ,
+                 :IndividualLiver ,
+                 :IndividualMaxSwimSpeed ,
+                 :IndividualMetabolicRate ,
+                 :IndividualMouthInjury ,
+                 :IndividualMucusParasites ,
+                 :IndividualMuscles ,
+                 :IndividualPrerigorMortisTime ,
+                 :IndividualRigorMortisTime ,
+                 :IndividualScaleLoss ,
+                 :IndividualSkinAlterations ,
+                 :IndividualSkinBleeding ,
+                 :IndividualSkinColour ,
+                 :IndividualSkinFungus ,
+                 :IndividualSkinInjury ,
+                 :IndividualSpinalDeformation ,
+                 :IndividualSpleen ,
+                 :IndividualSpleenosomaticIndex ,
+                 :IndividualSwimEndurance ,
+                 :IndividualTailgrabReflex ,
+                 :IndividualViscerosomaticIndex ,
+                 :OrgansCorticotropinReleasingHormone ,
+                 :OrgansGillCysts ,
+                 :OrgansGillEpithelialSloughing ,
+                 :OrgansGillHyperplasia ,
+                 :OrgansGillHypertrophy ,
+                 :OrgansGillLamellarFusion ,
+                 :OrgansHeartCellLysis ,
+                 :OrgansHeartVacuoles ,
+                 :OrgansHeatShockProteins ,
+                 :OrgansImmediateEarlyGenes ,
+                 :OrgansLiverCellLysis ,
+                 :OrgansLiverGlycogen ,
+                 :OrgansLiverVacuoles ,
+                 :OrgansMucusComposition ,
+                 :OrgansMusclePh ,
+                 :OrgansMususQuantitiy ,
+                 :OrgansOxydativeStress ,
+                 :PlantVaccination ,
+                 :PlasmaTotalCholesterol ,
+                 :PlasmaTotalProtein ,
+                 :PlasmaTriglycerides ,
+                 :ShoalApathy ,
+                 :ShoalBalance ,
+                 :ShoalBodyColour ,
+                 :ShoalFeeding ,
+                 :ShoalFinPosition ,
+                 :ShoalFleeing ,
+                 :ShoalFungalInfections ,
+                 :ShoalGillCoverDeformations ,
+                 :ShoalIsolation ,
+                 :ShoalJawDeformations ,
+                 :ShoalMortalityRate ,
+                 :ShoalOrientation ,
+                 :ShoalSpinalDeformations ,
+                 :ShoalSubmission ,
+                 :ShoalSurfacing ,
+                 :ShoalVentilationRate ,
+                 :TankAcusticLevel ,
+                 :WaterCoritcosterone ,
+                 :WaterCortisol ,
+                 :WaterCortisone ;
+        rdfs:comment "Health"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#Hygiene
+:Hygiene rdf:type owl:NamedIndividual ,
+                  :Need ;
+         :affects :FinAnalErosion ,
+                  :FinAnalInfection ,
+                  :FinCaudalErosion ,
+                  :FinCaudalInfection ,
+                  :FinDorsalErosion ,
+                  :FinDorsalInfection ,
+                  :FinPectoralErosion ,
+                  :FinPectoralInfection ,
+                  :FinVentralErosion ,
+                  :FinVentralInfection ,
+                  :IndividualBacterialInfection ,
+                  :IndividualBodyCavity ,
+                  :IndividualGillLamellaesecondary ,
+                  :IndividualGillParasites ,
+                  :IndividualGillsprimarlyLamellae ,
+                  :IndividualHeart ,
+                  :IndividualHepatosomaticIndex ,
+                  :IndividualIntestines ,
+                  :IndividualKidney ,
+                  :IndividualLiver ,
+                  :IndividualMucusParasites ,
+                  :IndividualMuscles ,
+                  :IndividualScaleLoss ,
+                  :IndividualSkinAlterations ,
+                  :IndividualSkinBleeding ,
+                  :IndividualSkinFungus ,
+                  :IndividualSkinInjury ,
+                  :IndividualSpleen ,
+                  :OrgansMucusComposition ,
+                  :OrgansMususQuantitiy ,
+                  :ShoalApathy ,
+                  :ShoalBalance ,
+                  :ShoalBodyColour ,
+                  :ShoalFinInjuries ,
+                  :ShoalFinPosition ,
+                  :ShoalFungalInfections ,
+                  :ShoalJumping ,
+                  :ShoalMortalityRate ,
+                  :ShoalOrientation ,
+                  :ShoalScratching ,
+                  :ShoalSkinInjuries ,
+                  :ShoalSurfacing ,
+                  :ShoalVentilationRate ,
+                  :WaterBsb ,
+                  :WaterCsb ;
+         rdfs:comment "Hygiene"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#IndividualBacterialInfection
+:IndividualBacterialInfection rdf:type owl:NamedIndividual ,
+                                       :Parameter ;
+                              :affects :Health ;
+                              rdfs:comment "individual - bacterial infection"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#IndividualBodyCavity
+:IndividualBodyCavity rdf:type owl:NamedIndividual ,
+                               :Parameter ;
+                      :affects :Health ;
+                      rdfs:comment "individual - body cavity"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#IndividualBodyComposition
+:IndividualBodyComposition rdf:type owl:NamedIndividual ,
+                                    :Parameter ;
+                           rdfs:comment "individual - body composition"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#IndividualBodyConditionFactor
+:IndividualBodyConditionFactor rdf:type owl:NamedIndividual ,
+                                        :Parameter ;
+                               :affects :Health ,
+                                        :ReproductiveBehaviour ,
+                                        :Rest ,
+                                        :SocialContact ;
+                               rdfs:comment "individual - body condition factor"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#IndividualCardiacActivity
+:IndividualCardiacActivity rdf:type owl:NamedIndividual ,
+                                    :Parameter ;
+                           :affects :Health ,
+                                    :Respiration ;
+                           rdfs:comment "individual - cardiac activity"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#IndividualCardiosomaticIndex
+:IndividualCardiosomaticIndex rdf:type owl:NamedIndividual ,
+                                       :Parameter ;
+                              :affects :Health ;
+                              rdfs:comment "individual - cardiosomatic index"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#IndividualCataract
+:IndividualCataract rdf:type owl:NamedIndividual ,
+                             :Parameter ;
+                    :affects :Exploration ,
+                             :Health ;
+                    rdfs:comment "individual - cataract"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#IndividualExophthalmia
+:IndividualExophthalmia rdf:type owl:NamedIndividual ,
+                                 :Parameter ;
+                        :affects :Exploration ,
+                                 :Health ,
+                                 :Safety ;
+                        rdfs:comment "individual - exophthalmia"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#IndividualEyeBleeding
+:IndividualEyeBleeding rdf:type owl:NamedIndividual ,
+                                :Parameter ;
+                       :affects :Exploration ,
+                                :Health ,
+                                :Safety ;
+                       rdfs:comment "individual - eye bleeding"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#IndividualEyeColour
+:IndividualEyeColour rdf:type owl:NamedIndividual ,
+                              :Parameter ;
+                     rdfs:comment "individual - eye colour"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#IndividualEyeInjury
+:IndividualEyeInjury rdf:type owl:NamedIndividual ,
+                              :Parameter ;
+                     :affects :Exploration ,
+                              :Health ,
+                              :Safety ;
+                     rdfs:comment "individual - eye injury"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#IndividualEyeRollReflex
+:IndividualEyeRollReflex rdf:type owl:NamedIndividual ,
+                                  :Parameter ;
+                         rdfs:comment "individual - eye roll reflex"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#IndividualGillCover
+:IndividualGillCover rdf:type owl:NamedIndividual ,
+                              :Parameter ;
+                     :affects :Health ,
+                              :OsmoticRegulation ,
+                              :Respiration ,
+                              :Rest ,
+                              :Safety ;
+                     rdfs:comment "individual - gill cover"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#IndividualGillLamellaesecondary
+:IndividualGillLamellaesecondary rdf:type owl:NamedIndividual ,
+                                          :Parameter ;
+                                 :affects :Health ,
+                                          :OsmoticRegulation ,
+                                          :Respiration ;
+                                 rdfs:comment "individual - gill lamellae (secondary)"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#IndividualGillParasites
+:IndividualGillParasites rdf:type owl:NamedIndividual ,
+                                  :Parameter ;
+                         :affects :Health ,
+                                  :Hygiene ,
+                                  :OsmoticRegulation ,
+                                  :Respiration ;
+                         rdfs:comment "individual - gill parasites"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#IndividualGillsprimarlyLamellae
+:IndividualGillsprimarlyLamellae rdf:type owl:NamedIndividual ,
+                                          :Parameter ;
+                                 :affects :Health ,
+                                          :Hygiene ,
+                                          :OsmoticRegulation ,
+                                          :Respiration ,
+                                          :Rest ,
+                                          :Safety ;
+                                 rdfs:comment "individual - gills (primarly lamellae)"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#IndividualGonadosomaticIndex
+:IndividualGonadosomaticIndex rdf:type owl:NamedIndividual ,
+                                       :Parameter ;
+                              :affects :ReproductiveBehaviour ;
+                              rdfs:comment "individual - gonadosomatic index"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#IndividualGrowthOtoliths
+:IndividualGrowthOtoliths rdf:type owl:NamedIndividual ,
+                                   :Parameter ;
+                          rdfs:comment "individual - growth - otoliths"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#IndividualGrowthScale
+:IndividualGrowthScale rdf:type owl:NamedIndividual ,
+                                :Parameter ;
+                       rdfs:comment "individual - growth - scale"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#IndividualHeart
+:IndividualHeart rdf:type owl:NamedIndividual ,
+                          :Parameter ;
+                 :affects :Health ,
+                          :Respiration ;
+                 rdfs:comment "individual - heart"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#IndividualHepatosomaticIndex
+:IndividualHepatosomaticIndex rdf:type owl:NamedIndividual ,
+                                       :Parameter ;
+                              :affects :Health ;
+                              rdfs:comment "individual - hepatosomatic Index"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#IndividualIntestines
+:IndividualIntestines rdf:type owl:NamedIndividual ,
+                               :Parameter ;
+                      :affects :Health ,
+                               :Nutrition ;
+                      rdfs:comment "individual - intestines"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#IndividualJawDeformation
+:IndividualJawDeformation rdf:type owl:NamedIndividual ,
+                                   :Parameter ;
+                          :affects :Health ,
+                                   :Nutrition ,
+                                   :Respiration ,
+                                   :Safety ;
+                          rdfs:comment "individual - jaw deformation"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#IndividualKidney
+:IndividualKidney rdf:type owl:NamedIndividual ,
+                           :Parameter ;
+                  :affects :Health ;
+                  rdfs:comment "individual - kidney"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#IndividualLiver
+:IndividualLiver rdf:type owl:NamedIndividual ,
+                          :Parameter ;
+                 :affects :Health ;
+                 rdfs:comment "individual - liver"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#IndividualMaxSwimSpeed
+:IndividualMaxSwimSpeed rdf:type owl:NamedIndividual ,
+                                 :Parameter ;
+                        :affects :Health ,
+                                 :Respiration ;
+                        rdfs:comment "individual - max swim speed"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#IndividualMetabolicRate
+:IndividualMetabolicRate rdf:type owl:NamedIndividual ,
+                                  :Parameter ;
+                         :affects :Health ,
+                                  :Movement ,
+                                  :Respiration ;
+                         rdfs:comment "individual - metabolic rate"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#IndividualMouthInjury
+:IndividualMouthInjury rdf:type owl:NamedIndividual ,
+                                :Parameter ;
+                       :affects :Health ,
+                                :Nutrition ,
+                                :Respiration ,
+                                :Safety ;
+                       rdfs:comment "individual - mouth injury"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#IndividualMucusParasites
+:IndividualMucusParasites rdf:type owl:NamedIndividual ,
+                                   :Parameter ;
+                          :affects :Health ,
+                                   :Hygiene ;
+                          rdfs:comment "individual - mucus parasites"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#IndividualMuscles
+:IndividualMuscles rdf:type owl:NamedIndividual ,
+                            :Parameter ;
+                   :affects :Health ,
+                            :Movement ;
+                   rdfs:comment "individual - muscles"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#IndividualOperculaInjury
+:IndividualOperculaInjury rdf:type owl:NamedIndividual ,
+                                   :Parameter ;
+                          :affects :Health ,
+                                   :Respiration ;
+                          rdfs:comment "individual - opercula injury"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#IndividualPrerigorMortisTime
+:IndividualPrerigorMortisTime rdf:type owl:NamedIndividual ,
+                                       :Parameter ;
+                              rdfs:comment "individual - pre-rigor mortis time"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#IndividualReproductiveOrgans
+:IndividualReproductiveOrgans rdf:type owl:NamedIndividual ,
+                                       :Parameter ;
+                              :affects :ReproductiveBehaviour ,
+                                       :SocialContact ;
+                              rdfs:comment "individual - reproductive organs"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#IndividualRigorMortisTime
+:IndividualRigorMortisTime rdf:type owl:NamedIndividual ,
+                                    :Parameter ;
+                           rdfs:comment "individual - rigor mortis time"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#IndividualScaleLoss
+:IndividualScaleLoss rdf:type owl:NamedIndividual ,
+                              :Parameter ;
+                     :affects :Health ,
+                              :OsmoticRegulation ;
+                     rdfs:comment "individual - scale loss"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#IndividualSkinAlterations
+:IndividualSkinAlterations rdf:type owl:NamedIndividual ,
+                                    :Parameter ;
+                           :affects :Health ,
+                                    :OsmoticRegulation ;
+                           rdfs:comment "individual - skin alterations"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#IndividualSkinBleeding
+:IndividualSkinBleeding rdf:type owl:NamedIndividual ,
+                                 :Parameter ;
+                        :affects :Health ,
+                                 :Safety ;
+                        rdfs:comment "individual - skin bleeding"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#IndividualSkinColour
+:IndividualSkinColour rdf:type owl:NamedIndividual ,
+                               :Parameter ;
+                      rdfs:comment "individual - skin colour"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#IndividualSkinFungus
+:IndividualSkinFungus rdf:type owl:NamedIndividual ,
+                               :Parameter ;
+                      :affects :Health ,
+                               :OsmoticRegulation ;
+                      rdfs:comment "individual - skin fungus"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#IndividualSkinInjury
+:IndividualSkinInjury rdf:type owl:NamedIndividual ,
+                               :Parameter ;
+                      :affects :Health ,
+                               :OsmoticRegulation ,
+                               :Safety ;
+                      rdfs:comment "individual - skin injury"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#IndividualSpinalDeformation
+:IndividualSpinalDeformation rdf:type owl:NamedIndividual ,
+                                      :Parameter ;
+                             :affects :Exploration ,
+                                      :Health ,
+                                      :Movement ,
+                                      :Nutrition ,
+                                      :Rest ,
+                                      :Safety ,
+                                      :SocialContact ;
+                             rdfs:comment "individual - spinal deformation"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#IndividualSpleen
+:IndividualSpleen rdf:type owl:NamedIndividual ,
+                           :Parameter ;
+                  :affects :Health ;
+                  rdfs:comment "individual - spleen"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#IndividualSpleenosomaticIndex
+:IndividualSpleenosomaticIndex rdf:type owl:NamedIndividual ,
+                                        :Parameter ;
+                               :affects :Health ;
+                               rdfs:comment "individual - spleenosomatic index"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#IndividualSwimEndurance
+:IndividualSwimEndurance rdf:type owl:NamedIndividual ,
+                                  :Parameter ;
+                         :affects :Respiration ;
+                         rdfs:comment "individual - swim endurance"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#IndividualTailgrabReflex
+:IndividualTailgrabReflex rdf:type owl:NamedIndividual ,
+                                   :Parameter ;
+                          rdfs:comment "individual - tail-grab reflex"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#IndividualVaccinationDamage
+:IndividualVaccinationDamage rdf:type owl:NamedIndividual ,
+                                      :Parameter ;
+                             :affects :Health ;
+                             rdfs:comment "individual - vaccination damage"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#IndividualViralInfection
+:IndividualViralInfection rdf:type owl:NamedIndividual ,
+                                   :Parameter ;
+                          :affects :Health ;
+                          rdfs:comment "individual - viral infection"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#IndividualViscerosomaticIndex
+:IndividualViscerosomaticIndex rdf:type owl:NamedIndividual ,
+                                        :Parameter ;
+                               :affects :Health ;
+                               rdfs:comment "individual - viscerosomatic index"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#Movement
+:Movement rdf:type owl:NamedIndividual ,
+                   :Need ;
+          :affects :BloodCreatineKinase ,
+                   :BloodLactateDehydrogenase ,
+                   :IndividualBodyComposition ,
+                   :IndividualBodyConditionFactor ,
+                   :IndividualCardiacActivity ,
+                   :IndividualMetabolicRate ,
+                   :IndividualMuscles ,
+                   :IndividualViscerosomaticIndex ,
+                   :ShoalAggression ,
+                   :ShoalMortalityRate ,
+                   :ShoalSpaceUse ,
+                   :ShoalVentilationRate ;
+          rdfs:comment "Movement"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#Nutrition
+:Nutrition rdf:type owl:NamedIndividual ,
+                    :Need ;
+           :affects :BloodAlanineAminotransferase ,
+                    :BloodBileAcids ,
+                    :BloodCholesterol ,
+                    :BloodGlucose ,
+                    :IndividualBodyComposition ,
+                    :IndividualBodyConditionFactor ,
+                    :IndividualCataract ,
+                    :IndividualGillCover ,
+                    :IndividualGonadosomaticIndex ,
+                    :IndividualGrowthOtoliths ,
+                    :IndividualGrowthScale ,
+                    :IndividualHeart ,
+                    :IndividualHepatosomaticIndex ,
+                    :IndividualIntestines ,
+                    :IndividualJawDeformation ,
+                    :IndividualKidney ,
+                    :IndividualLiver ,
+                    :IndividualMouthInjury ,
+                    :IndividualMuscles ,
+                    :IndividualReproductiveOrgans ,
+                    :IndividualSpinalDeformation ,
+                    :IndividualSpleen ,
+                    :IndividualViscerosomaticIndex ,
+                    :OrgansMucusComposition ,
+                    :OrgansMususQuantitiy ,
+                    :PlasmaGlucose ,
+                    :PlasmaLactate ,
+                    :PlasmaTotalCholesterol ,
+                    :PlasmaTotalProtein ,
+                    :PlasmaTriglycerides ,
+                    :ShoalAggression ,
+                    :ShoalApathy ,
+                    :ShoalFeeding ,
+                    :ShoalGillCoverDeformations ,
+                    :ShoalJawDeformations ,
+                    :ShoalMortalityRate ,
+                    :ShoalSpinalDeformations ,
+                    :ShoalTerritoriality ,
+                    :WaterAmmonia ,
+                    :WaterAmmonium ,
+                    :WaterNitrate ,
+                    :WaterNitrite ;
+           rdfs:comment "Nutrition"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#OrgansCorticotropinReleasingHormone
+:OrgansCorticotropinReleasingHormone rdf:type owl:NamedIndividual ,
+                                              :Parameter ;
+                                     :affects :Health ;
+                                     rdfs:comment "organs - corticotropin releasing hormone"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#OrgansGillCysts
+:OrgansGillCysts rdf:type owl:NamedIndividual ,
+                          :Parameter ;
+                 :affects :Health ,
+                          :Respiration ;
+                 rdfs:comment "organs - gill cysts"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#OrgansGillEpithelialSloughing
+:OrgansGillEpithelialSloughing rdf:type owl:NamedIndividual ,
+                                        :Parameter ;
+                               :affects :Health ,
+                                        :Respiration ;
+                               rdfs:comment "organs - gill epithelial sloughing"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#OrgansGillHyperplasia
+:OrgansGillHyperplasia rdf:type owl:NamedIndividual ,
+                                :Parameter ;
+                       :affects :Health ,
+                                :Respiration ;
+                       rdfs:comment "organs - gill hyperplasia"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#OrgansGillHypertrophy
+:OrgansGillHypertrophy rdf:type owl:NamedIndividual ,
+                                :Parameter ;
+                       :affects :Health ,
+                                :Respiration ;
+                       rdfs:comment "organs - gill hypertrophy"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#OrgansGillLamellarFusion
+:OrgansGillLamellarFusion rdf:type owl:NamedIndividual ,
+                                   :Parameter ;
+                          :affects :Health ,
+                                   :Respiration ;
+                          rdfs:comment "organs - gill lamellar fusion"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#OrgansHeartCellLysis
+:OrgansHeartCellLysis rdf:type owl:NamedIndividual ,
+                               :Parameter ;
+                      :affects :Health ;
+                      rdfs:comment "organs - heart cell lysis"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#OrgansHeartVacuoles
+:OrgansHeartVacuoles rdf:type owl:NamedIndividual ,
+                              :Parameter ;
+                     :affects :Health ;
+                     rdfs:comment "organs - heart vacuoles"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#OrgansHeatShockProteins
+:OrgansHeatShockProteins rdf:type owl:NamedIndividual ,
+                                  :Parameter ;
+                         :affects :Health ;
+                         rdfs:comment "organs - heat shock proteins"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#OrgansImmediateEarlyGenes
+:OrgansImmediateEarlyGenes rdf:type owl:NamedIndividual ,
+                                    :Parameter ;
+                           :affects :Health ;
+                           rdfs:comment "organs - immediate early genes"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#OrgansLiverCellLysis
+:OrgansLiverCellLysis rdf:type owl:NamedIndividual ,
+                               :Parameter ;
+                      :affects :Health ;
+                      rdfs:comment "organs - liver cell lysis"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#OrgansLiverGlycogen
+:OrgansLiverGlycogen rdf:type owl:NamedIndividual ,
+                              :Parameter ;
+                     :affects :Health ;
+                     rdfs:comment "organs - liver glycogen"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#OrgansLiverVacuoles
+:OrgansLiverVacuoles rdf:type owl:NamedIndividual ,
+                              :Parameter ;
+                     :affects :Health ;
+                     rdfs:comment "organs - liver vacuoles"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#OrgansMucusComposition
+:OrgansMucusComposition rdf:type owl:NamedIndividual ,
+                                 :Parameter ;
+                        :affects :Health ;
+                        rdfs:comment "organs - mucus composition"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#OrgansMusclePh
+:OrgansMusclePh rdf:type owl:NamedIndividual ,
+                         :Parameter ;
+                rdfs:comment "organs - muscle pH"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#OrgansMususQuantitiy
+:OrgansMususQuantitiy rdf:type owl:NamedIndividual ,
+                               :Parameter ;
+                      :affects :Health ;
+                      rdfs:comment "organs - musus quantitiy"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#OrgansOxydativeStress
+:OrgansOxydativeStress rdf:type owl:NamedIndividual ,
+                                :Parameter ;
+                       :affects :Health ;
+                       rdfs:comment "organs - oxydative stress"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#OsmoticRegulation
+:OsmoticRegulation rdf:type owl:NamedIndividual ,
+                            :Need ;
+                   :affects :PlasmaOsmolality ,
+                            :ShoalApathy ,
+                            :ShoalBalance ,
+                            :ShoalMortalityRate ,
+                            :ShoalVentilationRate ;
+                   rdfs:comment "Osmotic regulation"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#PlantAmbientLightCycle
+:PlantAmbientLightCycle rdf:type owl:NamedIndividual ,
+                                 :Parameter ;
+                        :affects :Exploration ,
+                                 :Movement ,
+                                 :ReproductiveBehaviour ,
+                                 :Rest ,
+                                 :Safety ,
+                                 :SocialContact ;
+                        rdfs:comment "plant - ambient light cycle"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#PlantAmbientLightIntensity
+:PlantAmbientLightIntensity rdf:type owl:NamedIndividual ,
+                                     :Parameter ;
+                            :affects :Exploration ,
+                                     :Movement ,
+                                     :ReproductiveBehaviour ,
+                                     :Rest ,
+                                     :Safety ,
+                                     :SocialContact ;
+                            rdfs:comment "plant - ambient light intensity"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#PlantBiomassDocumentation
+:PlantBiomassDocumentation rdf:type owl:NamedIndividual ,
+                                    :Parameter ;
+                           :affects :Nutrition ;
+                           rdfs:comment "plant - biomass documentation"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#PlantCatchingMethods
+:PlantCatchingMethods rdf:type owl:NamedIndividual ,
+                               :Parameter ;
+                      :affects :Health ,
+                               :Respiration ,
+                               :Safety ;
+                      rdfs:comment "plant - catching methods"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#PlantCleanliness
+:PlantCleanliness rdf:type owl:NamedIndividual ,
+                           :Parameter ;
+                  :affects :Health ,
+                           :Hygiene ;
+                  rdfs:comment "plant - cleanliness"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#PlantContingencyPlan
+:PlantContingencyPlan rdf:type owl:NamedIndividual ,
+                               :Parameter ;
+                      :affects :Health ,
+                               :Respiration ,
+                               :Safety ,
+                               :ThermalRegulation ,
+                               :WaterQuality ;
+                      rdfs:comment "plant - contingency plan"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#PlantCrowdingDuration
+:PlantCrowdingDuration rdf:type owl:NamedIndividual ,
+                                :Parameter ;
+                       :affects :Health ,
+                                :Respiration ,
+                                :Safety ;
+                       rdfs:comment "plant - crowding duration"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#PlantDailyCheck
+:PlantDailyCheck rdf:type owl:NamedIndividual ,
+                          :Parameter ;
+                 :affects :Health ,
+                          :Nutrition ,
+                          :Safety ,
+                          :WaterQuality ;
+                 rdfs:comment "plant - daily check"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#PlantDisturbances
+:PlantDisturbances rdf:type owl:NamedIndividual ,
+                            :Parameter ;
+                   :affects :Movement ,
+                            :Rest ,
+                            :Safety ;
+                   rdfs:comment "plant - disturbances"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#PlantFcrDocumentation
+:PlantFcrDocumentation rdf:type owl:NamedIndividual ,
+                                :Parameter ;
+                       :affects :Health ;
+                       rdfs:comment "plant - FCR documentation"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#PlantFeedLeftovers
+:PlantFeedLeftovers rdf:type owl:NamedIndividual ,
+                             :Parameter ;
+                    :affects :Health ,
+                             :Hygiene ,
+                             :Nutrition ,
+                             :WaterQuality ;
+                    rdfs:comment "plant - feed leftovers"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#PlantFeedType
+:PlantFeedType rdf:type owl:NamedIndividual ,
+                        :Parameter ;
+               :affects :Health ,
+                        :Nutrition ;
+               rdfs:comment "plant - feed type"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#PlantFeedingInterval
+:PlantFeedingInterval rdf:type owl:NamedIndividual ,
+                               :Parameter ;
+                      :affects :Health ,
+                               :Nutrition ,
+                               :SocialContact ;
+                      rdfs:comment "plant - feeding interval"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#PlantFeedingRate
+:PlantFeedingRate rdf:type owl:NamedIndividual ,
+                           :Parameter ;
+                  :affects :Health ,
+                           :Nutrition ,
+                           :SocialContact ;
+                  rdfs:comment "plant - feeding rate"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#PlantFoodStorage
+:PlantFoodStorage rdf:type owl:NamedIndividual ,
+                           :Parameter ;
+                  :affects :Health ,
+                           :Nutrition ;
+                  rdfs:comment "plant - food storage"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#PlantHygieneConcept
+:PlantHygieneConcept rdf:type owl:NamedIndividual ,
+                              :Parameter ;
+                     :affects :Health ,
+                              :Hygiene ;
+                     rdfs:comment "plant - hygiene concept"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#PlantMortalityDocumentation
+:PlantMortalityDocumentation rdf:type owl:NamedIndividual ,
+                                      :Parameter ;
+                             :affects :Health ;
+                             rdfs:comment "plant - mortality documentation"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#PlantPergingDuration
+:PlantPergingDuration rdf:type owl:NamedIndividual ,
+                               :Parameter ;
+                      :affects :Health ,
+                               :Respiration ,
+                               :Safety ,
+                               :WaterQuality ;
+                      rdfs:comment "plant - perging duration"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#PlantPersonnelTraining
+:PlantPersonnelTraining rdf:type owl:NamedIndividual ,
+                                 :Parameter ;
+                        :affects :Health ,
+                                 :Hygiene ,
+                                 :Nutrition ,
+                                 :WaterQuality ;
+                        rdfs:comment "plant - personnel training"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#PlantPredatorProtection
+:PlantPredatorProtection rdf:type owl:NamedIndividual ,
+                                  :Parameter ;
+                         :affects :Safety ;
+                         rdfs:comment "plant - predator protection"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#PlantSlaughterMethod
+:PlantSlaughterMethod rdf:type owl:NamedIndividual ,
+                               :Parameter ;
+                      :affects :Safety ;
+                      rdfs:comment "plant - slaughter method"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#PlantSortingInterval
+:PlantSortingInterval rdf:type owl:NamedIndividual ,
+                               :Parameter ;
+                      :affects :Nutrition ,
+                               :SocialContact ;
+                      rdfs:comment "plant - sorting interval"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#PlantSortingMethods
+:PlantSortingMethods rdf:type owl:NamedIndividual ,
+                              :Parameter ;
+                     :affects :Health ,
+                              :Respiration ,
+                              :Safety ;
+                     rdfs:comment "plant - sorting methods"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#PlantStockingDensity
+:PlantStockingDensity rdf:type owl:NamedIndividual ,
+                               :Parameter ;
+                      :affects :Health ,
+                               :Hygiene ,
+                               :Movement ,
+                               :Nutrition ,
+                               :Rest ,
+                               :SocialContact ,
+                               :WaterQuality ;
+                      rdfs:comment "plant - stocking density"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#PlantTargetValueDocument
+:PlantTargetValueDocument rdf:type owl:NamedIndividual ,
+                                   :Parameter ;
+                          :affects :Health ,
+                                   :OsmoticRegulation ,
+                                   :Respiration ,
+                                   :ThermalRegulation ,
+                                   :WaterQuality ;
+                          rdfs:comment "plant - target value document"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#PlantTreatmentJournal
+:PlantTreatmentJournal rdf:type owl:NamedIndividual ,
+                                :Parameter ;
+                       :affects :Health ,
+                                :Hygiene ;
+                       rdfs:comment "plant - treatment journal"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#PlantVaccination
+:PlantVaccination rdf:type owl:NamedIndividual ,
+                           :Parameter ;
+                  rdfs:comment "plant - vaccination"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#PlasmaCoritcosterone
+:PlasmaCoritcosterone rdf:type owl:NamedIndividual ,
+                               :Parameter ;
+                      rdfs:comment "plasma - coritcosterone"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#PlasmaCortisol
+:PlasmaCortisol rdf:type owl:NamedIndividual ,
+                         :Parameter ;
+                rdfs:comment "plasma - cortisol"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#PlasmaCortisone
+:PlasmaCortisone rdf:type owl:NamedIndividual ,
+                          :Parameter ;
+                 rdfs:comment "plasma - cortisone"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#PlasmaGlucose
+:PlasmaGlucose rdf:type owl:NamedIndividual ,
+                        :Parameter ;
+               rdfs:comment "plasma - glucose"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#PlasmaLactate
+:PlasmaLactate rdf:type owl:NamedIndividual ,
+                        :Parameter ;
+               rdfs:comment "plasma - lactate"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#PlasmaOsmolality
+:PlasmaOsmolality rdf:type owl:NamedIndividual ,
+                           :Parameter ;
+                  :affects :OsmoticRegulation ;
+                  rdfs:comment "plasma - osmolality"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#PlasmaTotalCholesterol
+:PlasmaTotalCholesterol rdf:type owl:NamedIndividual ,
+                                 :Parameter ;
+                        :affects :Health ;
+                        rdfs:comment "plasma - total cholesterol"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#PlasmaTotalProtein
+:PlasmaTotalProtein rdf:type owl:NamedIndividual ,
+                             :Parameter ;
+                    :affects :Health ;
+                    rdfs:comment "plasma - total protein"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#PlasmaTriglycerides
+:PlasmaTriglycerides rdf:type owl:NamedIndividual ,
+                              :Parameter ;
+                     :affects :Health ;
+                     rdfs:comment "plasma - triglycerides"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#ReproductiveBehaviour
+:ReproductiveBehaviour rdf:type owl:NamedIndividual ,
+                                :Need ;
+                       :affects :IndividualGonadosomaticIndex ,
+                                :IndividualReproductiveOrgans ,
+                                :IndividualSkinFungus ,
+                                :ShoalAggression ,
+                                :ShoalFungalInfections ,
+                                :ShoalMortalityRate ,
+                                :ShoalTerritoriality ;
+                       rdfs:comment "Reproductive behaviour"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#Respiration
+:Respiration rdf:type owl:NamedIndividual ,
+                      :Need ;
+             :affects :IndividualMaxSwimSpeed ,
+                      :IndividualMetabolicRate ,
+                      :IndividualSwimEndurance ,
+                      :ShoalAirBreathing ,
+                      :ShoalApathy ,
+                      :ShoalBalance ,
+                      :ShoalMortalityRate ,
+                      :ShoalVentilationRate ,
+                      :WaterDisolvedCarbonDioxide ,
+                      :WaterDisolvedOxygen ,
+                      :WaterOxygenSaturation ,
+                      :WaterPh ;
+             rdfs:comment "Respiration"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#Rest
+:Rest rdf:type owl:NamedIndividual ,
+               :Need ;
+      :affects :IndividualBodyConditionFactor ,
+               :IndividualViscerosomaticIndex ,
+               :ShoalMortalityRate ,
+               :ShoalVentilationRate ;
+      rdfs:comment "Rest"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#Safety
+:Safety rdf:type owl:NamedIndividual ,
+                 :Need ;
+        :affects :BloodAdrenocorticotropicHormone ,
+                 :BloodEpinephrine ,
+                 :BloodNorepinephrine ,
+                 :FinCaudalErosion ,
+                 :FinCaudalInfection ,
+                 :FinDorsalErosion ,
+                 :FinDorsalInfection ,
+                 :FinPectoralErosion ,
+                 :FinPectoralInfection ,
+                 :FinVentralErosion ,
+                 :FinVentralInfection ,
+                 :IndividualExophthalmia ,
+                 :IndividualEyeBleeding ,
+                 :IndividualEyeInjury ,
+                 :IndividualGillCover ,
+                 :IndividualGillsprimarlyLamellae ,
+                 :IndividualJawDeformation ,
+                 :IndividualMouthInjury ,
+                 :IndividualSkinBleeding ,
+                 :IndividualSkinInjury ,
+                 :IndividualSpinalDeformation ,
+                 :PlasmaCoritcosterone ,
+                 :PlasmaCortisol ,
+                 :PlasmaCortisone ,
+                 :PlasmaGlucose ,
+                 :PlasmaLactate ,
+                 :ShoalEyeInjuries ,
+                 :ShoalFinInjuries ,
+                 :ShoalFinPosition ,
+                 :ShoalFleeing ,
+                 :ShoalIsolation ,
+                 :ShoalMortalityRate ,
+                 :ShoalSkinInjuries ,
+                 :ShoalStartling ,
+                 :ShoalVentilationRate ;
+        rdfs:comment "Safety"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#ShoalAggression
+:ShoalAggression rdf:type owl:NamedIndividual ,
+                          :Parameter ;
+                 :affects :Movement ,
+                          :Nutrition ,
+                          :Rest ,
+                          :Safety ,
+                          :SocialContact ;
+                 rdfs:comment "shoal - aggression"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#ShoalAirBreathing
+:ShoalAirBreathing rdf:type owl:NamedIndividual ,
+                            :Parameter ;
+                   :affects :Respiration ;
+                   rdfs:comment "shoal - air breathing"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#ShoalApathy
+:ShoalApathy rdf:type owl:NamedIndividual ,
+                      :Parameter ;
+             :affects :Nutrition ;
+             rdfs:comment "shoal - apathy"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#ShoalBalance
+:ShoalBalance rdf:type owl:NamedIndividual ,
+                       :Parameter ;
+              :affects :Exploration ,
+                       :Movement ,
+                       :Safety ;
+              rdfs:comment "shoal - balance"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#ShoalBodyColour
+:ShoalBodyColour rdf:type owl:NamedIndividual ,
+                          :Parameter ;
+                 rdfs:comment "shoal - body colour"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#ShoalEyeInjuries
+:ShoalEyeInjuries rdf:type owl:NamedIndividual ,
+                           :Parameter ;
+                  :affects :Exploration ,
+                           :Health ,
+                           :Movement ,
+                           :Nutrition ,
+                           :Safety ,
+                           :SocialContact ;
+                  rdfs:comment "shoal - eye injuries"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#ShoalFeeding
+:ShoalFeeding rdf:type owl:NamedIndividual ,
+                       :Parameter ;
+              :affects :Health ,
+                       :Nutrition ;
+              rdfs:comment "shoal - feeding"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#ShoalFinInjuries
+:ShoalFinInjuries rdf:type owl:NamedIndividual ,
+                           :Parameter ;
+                  :affects :Health ,
+                           :Movement ,
+                           :Nutrition ,
+                           :Rest ,
+                           :Safety ,
+                           :SocialContact ;
+                  rdfs:comment "shoal - fin injuries"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#ShoalFinPosition
+:ShoalFinPosition rdf:type owl:NamedIndividual ,
+                           :Parameter ;
+                  rdfs:comment "shoal - fin position"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#ShoalFishLifeStage
+:ShoalFishLifeStage rdf:type owl:NamedIndividual ,
+                             :Parameter ;
+                    rdfs:comment "shoal - fish life stage"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#ShoalFleeing
+:ShoalFleeing rdf:type owl:NamedIndividual ,
+                       :Parameter ;
+              rdfs:comment "shoal - fleeing"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#ShoalFungalInfections
+:ShoalFungalInfections rdf:type owl:NamedIndividual ,
+                                :Parameter ;
+                       rdfs:comment "shoal - fungal infections"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#ShoalGillCoverDeformations
+:ShoalGillCoverDeformations rdf:type owl:NamedIndividual ,
+                                     :Parameter ;
+                            :affects :Health ,
+                                     :Movement ,
+                                     :Respiration ;
+                            rdfs:comment "shoal - gill cover deformations"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#ShoalIsolation
+:ShoalIsolation rdf:type owl:NamedIndividual ,
+                         :Parameter ;
+                rdfs:comment "shoal - isolation"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#ShoalJawDeformations
+:ShoalJawDeformations rdf:type owl:NamedIndividual ,
+                               :Parameter ;
+                      :affects :Health ,
+                               :Nutrition ,
+                               :Respiration ;
+                      rdfs:comment "shoal - jaw deformations"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#ShoalJumping
+:ShoalJumping rdf:type owl:NamedIndividual ,
+                       :Parameter ;
+              :affects :BodyCare ,
+                       :Hygiene ;
+              rdfs:comment "shoal - jumping"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#ShoalMortalityRate
+:ShoalMortalityRate rdf:type owl:NamedIndividual ,
+                             :Parameter ;
+                    rdfs:comment "shoal - mortality rate"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#ShoalOrientation
+:ShoalOrientation rdf:type owl:NamedIndividual ,
+                           :Parameter ;
+                  :affects :Exploration ,
+                           :Movement ,
+                           :Safety ;
+                  rdfs:comment "shoal - orientation"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#ShoalScratching
+:ShoalScratching rdf:type owl:NamedIndividual ,
+                          :Parameter ;
+                 :affects :BodyCare ,
+                          :Hygiene ;
+                 rdfs:comment "shoal - scratching"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#ShoalSkinInjuries
+:ShoalSkinInjuries rdf:type owl:NamedIndividual ,
+                            :Parameter ;
+                   :affects :Health ,
+                            :OsmoticRegulation ,
+                            :Safety ;
+                   rdfs:comment "shoal - skin injuries"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#ShoalSpaceUse
+:ShoalSpaceUse rdf:type owl:NamedIndividual ,
+                        :Parameter ;
+               :affects :Movement ,
+                        :Rest ,
+                        :SocialContact ;
+               rdfs:comment "shoal - space use"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#ShoalSpinalDeformations
+:ShoalSpinalDeformations rdf:type owl:NamedIndividual ,
+                                  :Parameter ;
+                         :affects :Health ,
+                                  :Movement ,
+                                  :Nutrition ,
+                                  :Rest ;
+                         rdfs:comment "shoal - spinal deformations"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#ShoalStartling
+:ShoalStartling rdf:type owl:NamedIndividual ,
+                         :Parameter ;
+                :affects :Health ,
+                         :Movement ,
+                         :SocialContact ;
+                rdfs:comment "shoal - startling"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#ShoalSubmission
+:ShoalSubmission rdf:type owl:NamedIndividual ,
+                          :Parameter ;
+                 :affects :Health ,
+                          :SocialContact ;
+                 rdfs:comment "shoal - submission"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#ShoalSurfacing
+:ShoalSurfacing rdf:type owl:NamedIndividual ,
+                         :Parameter ;
+                rdfs:comment "shoal - surfacing"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#ShoalTerritoriality
+:ShoalTerritoriality rdf:type owl:NamedIndividual ,
+                              :Parameter ;
+                     :affects :Movement ,
+                              :Nutrition ,
+                              :Rest ,
+                              :SocialContact ;
+                     rdfs:comment "shoal - territoriality"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#ShoalVentilationRate
+:ShoalVentilationRate rdf:type owl:NamedIndividual ,
+                               :Parameter ;
+                      :affects :Respiration ;
+                      rdfs:comment "shoal - ventilation rate"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#SocialContact
+:SocialContact rdf:type owl:NamedIndividual ,
+                        :Need ;
+               :affects :BloodEpinephrine ,
+                        :BloodNorepinephrine ,
+                        :BloodSerotonin ,
+                        :FinCaudalErosion ,
+                        :FinCaudalInfection ,
+                        :FinDorsalErosion ,
+                        :FinDorsalInfection ,
+                        :IndividualBodyConditionFactor ,
+                        :IndividualReproductiveOrgans ,
+                        :IndividualSkinColour ,
+                        :ShoalAggression ,
+                        :ShoalFeeding ,
+                        :ShoalIsolation ,
+                        :ShoalJumping ,
+                        :ShoalMortalityRate ,
+                        :ShoalSpaceUse ,
+                        :ShoalSubmission ,
+                        :ShoalSurfacing ,
+                        :ShoalTerritoriality ,
+                        :WaterCoritcosterone ,
+                        :WaterCortisol ,
+                        :WaterCortisone ;
+               rdfs:comment "Social contact"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#TankAcusticLevel
+:TankAcusticLevel rdf:type owl:NamedIndividual ,
+                           :Parameter ;
+                  :affects :Exploration ,
+                           :Rest ,
+                           :Safety ,
+                           :SocialContact ;
+                  rdfs:comment "tank - acustic level"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#TankCover
+:TankCover rdf:type owl:NamedIndividual ,
+                    :Parameter ;
+           :affects :Exploration ,
+                    :Movement ,
+                    :Rest ,
+                    :Safety ,
+                    :SocialContact ;
+           rdfs:comment "tank - cover"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#TankEnrichment
+:TankEnrichment rdf:type owl:NamedIndividual ,
+                         :Parameter ;
+                :affects :Exploration ,
+                         :Movement ,
+                         :Rest ,
+                         :Safety ,
+                         :SocialContact ;
+                rdfs:comment "tank - enrichment"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#TankLightDistribution
+:TankLightDistribution rdf:type owl:NamedIndividual ,
+                                :Parameter ;
+                       :affects :Exploration ,
+                                :Movement ,
+                                :Nutrition ,
+                                :Rest ,
+                                :Safety ,
+                                :SocialContact ;
+                       rdfs:comment "tank - light distribution"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#TankLightIntensity
+:TankLightIntensity rdf:type owl:NamedIndividual ,
+                             :Parameter ;
+                    :affects :Exploration ,
+                             :Movement ,
+                             :Nutrition ,
+                             :ReproductiveBehaviour ,
+                             :Rest ,
+                             :Safety ,
+                             :SocialContact ;
+                    rdfs:comment "tank - light intensity"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#TankVisualProtection
+:TankVisualProtection rdf:type owl:NamedIndividual ,
+                               :Parameter ;
+                      :affects :Health ,
+                               :Safety ;
+                      rdfs:comment "tank - visual protection"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#ThermalRegulation
+:ThermalRegulation rdf:type owl:NamedIndividual ,
+                            :Need ;
+                   :affects :ShoalApathy ,
+                            :ShoalBalance ,
+                            :ShoalMortalityRate ,
+                            :ShoalVentilationRate ;
+                   rdfs:comment "Thermal regulation"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#WaterAlkalinity
+:WaterAlkalinity rdf:type owl:NamedIndividual ,
+                          :Parameter ;
+                 :affects :Health ,
+                          :OsmoticRegulation ,
+                          :WaterQuality ;
+                 rdfs:comment "water - alkalinity"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#WaterAmmonia
+:WaterAmmonia rdf:type owl:NamedIndividual ,
+                       :Parameter ;
+              :affects :Health ,
+                       :OsmoticRegulation ,
+                       :Respiration ,
+                       :WaterQuality ;
+              rdfs:comment "water - ammonia"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#WaterAmmonium
+:WaterAmmonium rdf:type owl:NamedIndividual ,
+                        :Parameter ;
+               :affects :Health ,
+                        :OsmoticRegulation ,
+                        :Respiration ,
+                        :WaterQuality ;
+               rdfs:comment "water - ammonium"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#WaterBsb
+:WaterBsb rdf:type owl:NamedIndividual ,
+                   :Parameter ;
+          :affects :WaterQuality ;
+          rdfs:comment "water - BSB"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#WaterCarboanteHardness
+:WaterCarboanteHardness rdf:type owl:NamedIndividual ,
+                                 :Parameter ;
+                        :affects :Health ,
+                                 :OsmoticRegulation ,
+                                 :WaterQuality ;
+                        rdfs:comment "water - carboante hardness"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#WaterConductivity
+:WaterConductivity rdf:type owl:NamedIndividual ,
+                            :Parameter ;
+                   :affects :Health ,
+                            :OsmoticRegulation ,
+                            :Respiration ,
+                            :WaterQuality ;
+                   rdfs:comment "water - conductivity"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#WaterCoritcosterone
+:WaterCoritcosterone rdf:type owl:NamedIndividual ,
+                              :Parameter ;
+                     rdfs:comment "water - coritcosterone"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#WaterCortisol
+:WaterCortisol rdf:type owl:NamedIndividual ,
+                        :Parameter ;
+               rdfs:comment "water - cortisol"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#WaterCortisone
+:WaterCortisone rdf:type owl:NamedIndividual ,
+                         :Parameter ;
+                rdfs:comment "water - cortisone"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#WaterCsb
+:WaterCsb rdf:type owl:NamedIndividual ,
+                   :Parameter ;
+          :affects :WaterQuality ;
+          rdfs:comment "water - CSB"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#WaterDisolvedCarbonDioxide
+:WaterDisolvedCarbonDioxide rdf:type owl:NamedIndividual ,
+                                     :Parameter ;
+                            :affects :Health ,
+                                     :Respiration ,
+                                     :WaterQuality ;
+                            rdfs:comment "water - disolved carbon dioxide"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#WaterDisolvedNitrogen
+:WaterDisolvedNitrogen rdf:type owl:NamedIndividual ,
+                                :Parameter ;
+                       :affects :WaterQuality ;
+                       rdfs:comment "water - disolved nitrogen"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#WaterDisolvedOxygen
+:WaterDisolvedOxygen rdf:type owl:NamedIndividual ,
+                              :Parameter ;
+                     :affects :Health ,
+                              :OsmoticRegulation ,
+                              :Respiration ,
+                              :Safety ,
+                              :WaterQuality ;
+                     rdfs:comment "water - disolved oxygen"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#WaterExchangeRate
+:WaterExchangeRate rdf:type owl:NamedIndividual ,
+                            :Parameter ;
+                   :affects :WaterQuality ;
+                   rdfs:comment "water - exchange rate"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#WaterLightAbsorption
+:WaterLightAbsorption rdf:type owl:NamedIndividual ,
+                               :Parameter ;
+                      rdfs:comment "water - light absorption"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#WaterNitrate
+:WaterNitrate rdf:type owl:NamedIndividual ,
+                       :Parameter ;
+              :affects :Health ,
+                       :OsmoticRegulation ,
+                       :WaterQuality ;
+              rdfs:comment "water - nitrate"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#WaterNitrite
+:WaterNitrite rdf:type owl:NamedIndividual ,
+                       :Parameter ;
+              :affects :Health ,
+                       :OsmoticRegulation ,
+                       :Respiration ,
+                       :WaterQuality ;
+              rdfs:comment "water - nitrite"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#WaterOxygenSaturation
+:WaterOxygenSaturation rdf:type owl:NamedIndividual ,
+                                :Parameter ;
+                       :affects :Health ,
+                                :OsmoticRegulation ,
+                                :Respiration ,
+                                :Safety ,
+                                :WaterQuality ;
+                       rdfs:comment "water - oxygen saturation"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#WaterPh
+:WaterPh rdf:type owl:NamedIndividual ,
+                  :Parameter ;
+         :affects :Health ,
+                  :OsmoticRegulation ,
+                  :Respiration ,
+                  :WaterQuality ;
+         rdfs:comment "water - pH"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#WaterPhosphate
+:WaterPhosphate rdf:type owl:NamedIndividual ,
+                         :Parameter ;
+                :affects :WaterQuality ;
+                rdfs:comment "water - phosphate"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#WaterQuality
+:WaterQuality rdf:type owl:NamedIndividual ,
+                       :Need ;
+              :affects :BloodAmmonia ,
+                       :BloodAmmonium ,
+                       :BloodNitrite ,
+                       :BloodPh ,
+                       :FinAnalInfection ,
+                       :FinCaudalInfection ,
+                       :FinDorsalInfection ,
+                       :FinPectoralInfection ,
+                       :FinVentralInfection ,
+                       :IndividualBacterialInfection ,
+                       :IndividualExophthalmia ,
+                       :IndividualGillLamellaesecondary ,
+                       :IndividualGillParasites ,
+                       :IndividualGillsprimarlyLamellae ,
+                       :IndividualHepatosomaticIndex ,
+                       :IndividualKidney ,
+                       :IndividualLiver ,
+                       :IndividualMucusParasites ,
+                       :IndividualScaleLoss ,
+                       :IndividualSkinFungus ,
+                       :IndividualSpinalDeformation ,
+                       :IndividualSpleen ,
+                       :OrgansMusclePh ,
+                       :PlasmaOsmolality ,
+                       :ShoalAirBreathing ,
+                       :ShoalApathy ,
+                       :ShoalBalance ,
+                       :ShoalBodyColour ,
+                       :ShoalFinInjuries ,
+                       :ShoalFinPosition ,
+                       :ShoalFungalInfections ,
+                       :ShoalGillCoverDeformations ,
+                       :ShoalJawDeformations ,
+                       :ShoalMortalityRate ,
+                       :ShoalOrientation ,
+                       :ShoalSpinalDeformations ,
+                       :ShoalSurfacing ,
+                       :ShoalVentilationRate ,
+                       :WaterLightAbsorption ;
+              rdfs:comment "Water quality"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#WaterSalinity
+:WaterSalinity rdf:type owl:NamedIndividual ,
+                        :Parameter ;
+               :affects :OsmoticRegulation ,
+                        :WaterQuality ;
+               rdfs:comment "water - salinity"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#WaterSulfate
+:WaterSulfate rdf:type owl:NamedIndividual ,
+                       :Parameter ;
+              :affects :WaterQuality ;
+              rdfs:comment "water - sulfate"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#WaterTemperature
+:WaterTemperature rdf:type owl:NamedIndividual ,
+                           :Parameter ;
+                  :affects :Health ,
+                           :Hygiene ,
+                           :OsmoticRegulation ,
+                           :ReproductiveBehaviour ,
+                           :Respiration ,
+                           :Safety ,
+                           :ThermalRegulation ,
+                           :WaterQuality ;
+                  rdfs:comment "water - temperature"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#WaterTotalGasPressure
+:WaterTotalGasPressure rdf:type owl:NamedIndividual ,
+                                :Parameter ;
+                       :affects :Health ,
+                                :OsmoticRegulation ,
+                                :Respiration ,
+                                :WaterQuality ;
+                       rdfs:comment "water - total gas pressure"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#WaterTotalSuspendedSolids
+:WaterTotalSuspendedSolids rdf:type owl:NamedIndividual ,
+                                    :Parameter ;
+                           :affects :Health ,
+                                    :Hygiene ,
+                                    :Respiration ,
+                                    :WaterQuality ;
+                           rdfs:comment "water - total suspended solids"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#WaterTurbidity
+:WaterTurbidity rdf:type owl:NamedIndividual ,
+                         :Parameter ;
+                :affects :WaterQuality ;
+                rdfs:comment "water - turbidity"@en .
+
+
+###  https://github.zhaw.ch/raw/AquacultureSystems/FarmCheckModel/master/FarmCheck.owl#WaterVelocity
+:WaterVelocity rdf:type owl:NamedIndividual ,
+                        :Parameter ;
+               :affects :Health ,
+                        :Movement ,
+                        :Respiration ,
+                        :Rest ,
+                        :WaterQuality ;
+               rdfs:comment "water - velocity"@en .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
